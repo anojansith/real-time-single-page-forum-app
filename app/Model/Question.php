@@ -1,9 +1,6 @@
 <?php
 
 namespace App\Model;
-namespace App\User;
-
-use App\Model\Category;
 use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
