@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Reply;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -44,4 +45,5 @@ class User extends Authenticatable
     {
         return $this->hasMany(Question::class);
     }
+
 }
