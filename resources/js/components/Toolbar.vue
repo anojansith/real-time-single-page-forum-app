@@ -3,11 +3,14 @@
 <!--        <v-toolbar-side-icon></v-toolbar-side-icon>-->
         <v-toolbar-title>Bitfumes</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="pa-3">
+        <div class="hidden-sm-and-down">
             <v-btn flat>Forum</v-btn>
             <v-btn flat>Ask Question</v-btn>
             <v-btn flat>Category</v-btn>
-            <v-btn flat>Login</v-btn>
-        </v-toolbar-items>
+
+            <router-link to="/login">
+                <v-btn text>Login</v-btn>
+            </router-link>
+        </div>
     </v-toolbar>
 </template>

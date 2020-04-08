@@ -6,10 +6,11 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+//window.Vue = require('vue');
 import Vue from 'vue'
-import App from './App'
+import App from './app'
 import Vuetify from 'vuetify'
+import router from './Router/router.js'
 
 Vue.use (Vuetify)
 
@@ -24,7 +25,7 @@ Vue.use (Vuetify)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('AppHome', require('./components/AppHome.vue').default);
+
 
 
 
@@ -37,9 +38,11 @@ Vue.component('AppHome', require('./components/AppHome.vue').default);
 
 
 Vue.config.productionTip = false
-Vue.use(Vuetify)
+//Vue.use(Vuetify)
 
-import router from './Router/router.js'
+Vue.component('AppHome', require('./components/AppHome.vue').default);
+
+
 export default new Vuetify({ })
 
 /* eslint-disable no-new */
@@ -47,4 +50,4 @@ new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     router
-})
+});
