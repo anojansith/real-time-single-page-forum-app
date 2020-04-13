@@ -14,6 +14,13 @@ import router from './Router/router.js'
 
 Vue.use (Vuetify)
 
+import User from './Helpers/User'
+window.User = User
+//User.logout()
+// console.log(User.loggedIn())
+
+console.log(User.id())
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
