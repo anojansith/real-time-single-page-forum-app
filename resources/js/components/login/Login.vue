@@ -21,6 +21,10 @@
                 </v-col>
 
                 <v-btn color="green" type="submit">Login</v-btn>
+
+                <router-link to="/signup">
+                    <v-btn color="blue">Sign Up</v-btn>
+                </router-link>
             </v-row>
         </v-container>
     </v-form>
@@ -36,10 +40,17 @@
                 }
             }
         },
+        created(){
+            if(User.loggedIn()){
+                this.$router.push({name:'forum'})
+                //this will redirect to forum page
+            }
+        },
         methods:{
             login(){
                // alert('login')
                User.login(this.form)
+                //this.$router.push({name:'forum'})
             }
 
           }

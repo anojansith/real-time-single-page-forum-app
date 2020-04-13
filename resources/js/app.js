@@ -17,9 +17,11 @@ Vue.use (Vuetify)
 import User from './Helpers/User'
 window.User = User
 //User.logout()
-// console.log(User.loggedIn())
+//console.log(User.loggedIn())
 
-console.log(User.id())
+//console.log(User.id())
+
+window.EventBus = new Vue();
 
 /**
  * The following block of code may be used to automatically register your
