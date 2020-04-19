@@ -11,8 +11,19 @@ import Vue from 'vue'
 import App from './app'
 import Vuetify from 'vuetify'
 import router from './Router/router.js'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use (Vuetify)
+
+import VueSimplemde from 'vue-simplemde'
+
+import md from 'marked'
+window.md = md
+
+Vue.use(VueSimplemde)
+
+Vue.component('vue-simplemde', VueSimplemde)
+
 
 import User from './Helpers/User'
 window.User = User
@@ -52,7 +63,8 @@ Vue.config.productionTip = false
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 
 
-export default new Vuetify({ })
+export default new Vuetify({  })
+
 
 /* eslint-disable no-new */
 new Vue({
