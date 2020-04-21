@@ -11,6 +11,7 @@ class Question extends Model
     // guarded fills everything.
 
     protected $fillable = ['title', 'slug', 'body', 'user_id', 'category_id'];
+    protected $with = ['replies'];
 
 
     protected static function boot(){
@@ -33,7 +34,7 @@ class Question extends Model
 
     public function replies()
     {
-        return $this->hasMany(Reply::class);
+        return $this->hasMany(Reply::class)->latest();
     }
 
     public function category()

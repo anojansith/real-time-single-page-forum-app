@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 import Login from '../components/login/Login'
 import Logout from '../components/login/Logout'
 import SignUp from '../components/login/signup'
+import CreateCategory from '../components/category/CreateCategory'
 import Forum from '../components/forum/Forum'
 import Read from '../components/forum/read'
 import Create from '../components/forum/create'
@@ -41,7 +42,12 @@ const routes = [
     {
         path: '/ask',
         component: Create
-    }
+    },
+    {
+        path: '/category',
+        name: 'category',
+        component: CreateCategory
+    },
 
 ]
 
