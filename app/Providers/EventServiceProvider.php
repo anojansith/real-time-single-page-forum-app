@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Listeners\LikeEventListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -15,10 +16,21 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        Registered::class => [
-            SendEmailVerificationNotification::class,
+        'App\Events\LikeEvent' => [
+            'App\Listeners\LikeEventListener'
+        ],
+        'App\Events\DeleteReplyEvent' => [
+            'App\Listeners\DeleteReplyEventListener'
         ],
     ];
+
+//    protected $listen = [
+//        Registered::class => [
+//           // SendEmailVerificationNotification::class,
+//            LikeEventListener::class,
+//            DeleteReplyEventListener::class
+//        ],
+//    ];
 
     /**
      * Register any events for your application.
