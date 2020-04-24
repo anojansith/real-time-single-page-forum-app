@@ -7,7 +7,13 @@ use Auth;
 
 class NotificationController extends Controller
 {
-   public function index(){
+    public function __construct()
+    {
+        $this->middleware('JWT');
+    }
+
+
+    public function index(){
        $read = Auth::user()->readNotifications()->get();
        $unread = Auth::user()->unreadNotifications()->get();
 

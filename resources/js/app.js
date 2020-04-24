@@ -17,16 +17,20 @@ Vue.use (Vuetify)
 
 import VueSimplemde from 'vue-simplemde'
 
-import md from 'marked'
-window.md = md
-
 Vue.use(VueSimplemde)
 
 Vue.component('vue-simplemde', VueSimplemde)
 
 
+import md from 'marked'
+window.md = md
+
 import User from './Helpers/User'
 window.User = User
+
+import Exception from './Helpers/Exception'
+window.Exception = Exception
+
 //User.logout()
 //console.log(User.loggedIn())
 
